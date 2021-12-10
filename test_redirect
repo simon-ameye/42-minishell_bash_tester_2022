@@ -10,4 +10,7 @@ cat tmp2
 cat < tester.sh > tmp2
 ls
 cat tmp2
+
+cat<tester.sh<jnsdc ssdjcnnj>tmp2
+ls
 rm tmp1 tmp2

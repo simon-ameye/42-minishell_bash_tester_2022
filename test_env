@@ -1,0 +1,5 @@
+unset _
+env | wc -l
+echo "test 6 lets go" >> test6
+echo SHLVL VALUE : $SHLVL >> test6
+env >> test6

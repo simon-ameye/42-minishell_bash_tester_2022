@@ -1,3 +1,52 @@
+-------------------1-------------------
+minishell
+test6
+test_cd
+test_echo
+test_env
+tester.sh
+test_exit
+test_expand
+test_export
+test_multi
+test_pipe
+test_redirect
+tmp
+tmp1
+-------------------2-------------------
+hello
+minishell
+test6
+test_cd
+test_echo
+test_env
+tester.sh
+test_exit
+test_expand
+test_export
+test_multi
+test_pipe
+test_redirect
+tmp
+tmp1
+tmp2
+-------------------3-------------------
+minishell
+test6
+test_cd
+test_echo
+test_env
+tester.sh
+test_exit
+test_expand
+test_export
+test_multi
+test_pipe
+test_redirect
+tmp
+tmp1
+tmp2
+tmp3
 #!/bin/bash
 
 minishell_dir=../42-minishell-lexer/
@@ -8,11 +57,11 @@ NOCOLOR='\033[0m'
 
 make minishell -C $minishell_dir > /dev/null
 cp $minishell_dir/minishell .
-rm -rf trace
 
 function test()
 {
 	mkdir tmp
+	rm -rf trace
 	#echo ------------------$@------------------
 	printf "%-20s" $@
 
@@ -52,4 +101,4 @@ test "test_redirect"
 test "test_exit"
 test "test_multi"
 
-rm minishell
+rm minishellexit status 0

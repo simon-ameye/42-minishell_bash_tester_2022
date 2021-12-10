@@ -1,0 +1,7 @@
+unset _
+export kjbsdc
+export
+
+export lol='ahah$lol'
+echo $lol
+

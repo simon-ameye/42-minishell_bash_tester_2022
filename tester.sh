@@ -27,9 +27,9 @@ function test()
 	#-------------cmp-------------
 	diff tmp/ref tmp/res > tmp/diff
 	if [ -s tmp/diff ]; then 
-		printf "$RED[ KO ]\n$NOCOLOR"
+		printf "$RED[ KO ]$NOCOLOR"
 		mkdir trace/$@
-		echo "please check your trace in /trace/$@/"
+		echo " (please check your trace in /trace/$@/)"
 		cat tmp/diff > trace/$@/diff
 		cat tmp/res > trace/$@/your_output
 		cat tmp/ref > trace/$@/ref_output

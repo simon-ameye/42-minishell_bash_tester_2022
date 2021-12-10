@@ -1,21 +1,23 @@
 SHLVL VALUE : 3
 66
-test \ test
-
-
+test test
+test
+BLA
+BLA
 $TEST
-
-=lol
-    lol 
-
-=lollol
-lol
+BLABLABLA
+BLABLA=lolBLA
+   BLA lol BLA
+BLABLABLA
+BLABLA=lolBLAlol
+BLA lol BLA
 test  test  test
-\
+BLA
 $=TEST
 $
 0TEST
-
+BLA BLA
 TEST
 
+bla > yo
 exit status 0

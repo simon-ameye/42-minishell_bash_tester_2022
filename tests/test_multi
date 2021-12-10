@@ -1,17 +1,33 @@
 echo -------------------1-------------------
+echo $?
 echo hello > tmp1
+echo $?
 cat < tmp1 | cat < tmp2
+echo $?
 ls
+echo $?
 
+echo $?
 echo -------------------2-------------------
+echo $?
 cat < tester.sh | cat < bla | echo hello > tmp2
+echo $?
 cat tmp2
+echo $?
 ls
+echo $?
 
+echo $?
 echo -------------------3-------------------
+echo $?
 chmod 000 tmp2
+echo $?
 cat tester.sh >> tmp1 > tmp2 > tmp3 | cat tester.sh > tmp1 > tmp3
+echo $?
 ls
+echo $?
 cat tmp3
+echo $?
 
+echo $?
 rm tmp1 tmp2 tmp3

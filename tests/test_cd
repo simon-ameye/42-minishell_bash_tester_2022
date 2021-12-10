@@ -1,0 +1,53 @@
+cd 
+echo $?
+cd .. 
+echo $?
+cd . 
+echo $?
+cd /Users 
+echo $?
+cd // 
+echo $?
+cd '//' 
+echo $?
+cd ////// 
+echo $?
+cd ./././ 
+echo $?
+cd /
+echo $?
+cd '/////' 2>/dev/null 
+echo $?
+cd '/etc' 
+echo $?
+cd '/var' 
+echo $?
+cd "$PWD/file_tests" 
+echo $?
+cd "doesntexist" 
+echo $?
+cd "doesntexist" 2>/dev/null 
+echo $?
+cd ../../..
+echo $?
+cd "wtf" 2>/dev/null 
+echo $?
+cd .. 
+echo $?
+cd ..
+echo $?
+cd ?
+echo $?
+cd +
+echo $?
+cd _
+echo $?
+cd woof
+echo $?
+cd bark bark
+echo $?
+cd '/' 
+echo $?
+cd $PWD/file_tests 
+echo $?
+cd $OLDPWD/something 

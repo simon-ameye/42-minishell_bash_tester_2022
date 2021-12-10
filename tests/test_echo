@@ -1,9 +1,141 @@
 echo hello
+echo $?
 echo exit
+echo $?
 echo -n
+echo $?
 echo
+echo $?
 echo hello blabla
+echo $?
 echo -n -n -n blabla
+echo $?
 echo blabla -n
+echo $?
 echo echo hello
+echo $?
 echo "bla"bla ""''"'''" bla"bla   "'   "  ""  'sdc" ssdsd " sd' s''d s'sd 's'sd ' s' "vd v'd 'v df 'd df' v' dfv' dv' df 'dvf ' df vdf    v'df v' df'v "
+echo $?
+echo $?
+echo $?
+echo echo
+echo $?
+eCho 
+echo $?
+eChO
+echo $?
+eCHO
+echo $?
+ECHO
+echo $?
+echo rhobebou
+echo $?
+echo stop barking
+echo $?
+echo "bonjour"
+echo $?
+echo bonjour
+echo $?
+echo 'bonjour'
+echo $?
+echo -n bonjour
+echo $?
+echo -nn bonjour
+echo $?
+echo -n -n -n bonjour
+echo $?
+echo -n -n -n bonjour
+echo $?
+echo "-n" bonjour
+echo $?
+echo -n"-n" bonjour
+echo $?
+echo "-nnnn" bonjour
+echo $?
+echo "-n -n -n"-n bonjour
+echo $?
+echo "-n '-n'" bonjour
+echo $?
+echo "~"
+echo $?
+echo '~'
+echo $?
+echo $USER
+echo $?
+echo "$USER"
+echo $?
+echo "'$USER'"
+echo $?
+echo " '$USER' "
+echo $?
+echo text"$USER"
+echo $?
+echo text"'$USER'" ' $USER '
+echo $?
+echo "text"   "$USER"    "$USER"
+echo $?
+echo '              $USER          '
+echo $?
+echo               text "$USER"            "$USER"text
+echo $?
+echo ''''''''''$USER''''''''''
+echo $?
+echo """"""""$USER""""""""
+echo $?
+echo $USER'$USER'text oui oui     oui  oui $USER oui      $USER ''
+echo $?
+echo $USER '' $USER $USER '' $USER '' $USER -n $USER
+echo $?
+echo "$USER""$USER""$USER"
+echo $?
+echo text"$USER"test
+echo $?
+echo '$USER' "$USER" "text text"
+echo $?
+echo '$USER'
+echo $?
+echo $USER " "
+echo $?
+echo "$USER""Users/$USER/file""'$USER'"'$USER'
+echo $?
+echo "$USER$USER$USER"
+echo $?
+echo '$USER'"$USER"'$USER'
+echo $?
+echo '"$USER"''$USER'"""$USER"
+echo $?
+echo " $USER  "'$PWD'
+echo $?
+echo " $USER  $ "'$PWD'
+echo $?
+echo $USER=4
+echo $?
+echo $USER=thallard
+echo $?
+echo $USER
+echo $?
+echo $?
+echo $?
+echo $USER213
+echo $?
+echo $USER$12USER$USER=4$USER12
+echo $?
+echo $USER $123456789USER $USER123456789
+echo $?
+echo $USER $9999USER $8888USER $7777USER
+echo $?
+echo $USER $USER9999 $USER8888 $USER7777
+echo $?
+echo $USER $USER9999 $USER8888 $USER7777 "$USER"
+echo $?
+echo "$USER=12$USER"
+echo $?
+echo "$9USER" "'$USER=12$SOMETHING'"
+echo $?
+echo $PWD/file
+echo $?
+echo "$PWD/file"
+echo $?
+echo "text" "text$USER" ... "$USER"
+echo $?
+echo $PWD

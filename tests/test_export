@@ -1,7 +1,14 @@
 unset _
+echo $?
 export kjbsdc
+echo $?
 export
+echo $?
 
+echo $?
 export lol='ahah$lol'
+echo $?
 echo $lol
+echo $?
 
+echo $?

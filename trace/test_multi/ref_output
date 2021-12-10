@@ -1,3 +1,42 @@
+-------------------1-------------------
+0
+0
+1
+minishell
+tester.sh
+tests
+tmp
+tmp1
+trace
+0
+0
+-------------------2-------------------
+0
+0
+hello
+0
+minishell
+tester.sh
+tests
+tmp
+tmp1
+tmp2
+trace
+0
+0
+-------------------3-------------------
+0
+0
+0
+minishell
+tester.sh
+tests
+tmp
+tmp1
+tmp2
+tmp3
+trace
+0
 #!/bin/bash
 
 ###USER SETINGS###
@@ -63,4 +102,6 @@ test "test_exit"
 test "test_pipe"
 test "test_multi"
 
-rm minishell
+rm minishell0
+0
+exit status 0

@@ -1,3 +1,30 @@
+jhjbsdc
+minishell
+tester.sh
+tests
+tmp
+tmp1
+trace
+kjnsdc sdc sddc knsdc sdc sdcsdc
+minishell
+tester.sh
+tests
+tmp
+tmp1
+trace
+minishell
+tester.sh
+tests
+tmp
+tmp1
+trace
+minishell
+tester.sh
+tests
+tmp
+tmp1
+tmp2
+trace
 #!/bin/bash
 
 ###USER SETINGS###
@@ -63,4 +90,11 @@ test "test_exit"
 test "test_pipe"
 test "test_multi"
 
-rm minishell
+rm minishellminishell
+tester.sh
+tests
+tmp
+tmp1
+tmp2
+trace
+exit status 0

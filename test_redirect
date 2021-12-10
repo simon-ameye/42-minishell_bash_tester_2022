@@ -1,0 +1,13 @@
+echo jhjbsdc >> tmp1
+cat tmp1
+ls
+echo kjnsdc sdc sddc > tmp1 knsdc sdc  sdcsdc > tmp1
+cat tmp1
+ls
+cat < tester.sh < jnsdc ssdjcnnj > tmp2
+ls
+cat tmp2
+cat < tester.sh > tmp2
+ls
+cat tmp2
+rm tmp1 tmp2

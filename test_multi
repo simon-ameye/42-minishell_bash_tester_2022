@@ -1,0 +1,17 @@
+echo -------------------1-------------------
+echo hello > tmp1
+cat < tmp1 | cat < tmp2
+ls
+
+echo -------------------2-------------------
+cat < tester.sh | cat < bla | echo hello > tmp2
+cat tmp2
+ls
+
+echo -------------------3-------------------
+chmod 000 tmp2
+cat tester.sh >> tmp1 > tmp2 > tmp3 | cat tester.sh > tmp1 > tmp3
+ls
+cat tmp3
+
+rm tmp1 tmp2 tmp3

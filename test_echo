@@ -1,0 +1,9 @@
+echo hello
+echo exit
+echo -n
+echo
+echo hello blabla
+echo -n -n -n blabla
+echo blabla -n
+echo echo hello
+echo "bla"bla ""''"'''" bla"bla   "'   "  ""  'sdc" ssdsd " sd' s''d s'sd 's'sd ' s' "vd v'd 'v df 'd df' v' dfv' dv' df 'dvf ' df vdf    v'df v' df'v "

@@ -18,23 +18,22 @@ function test()
 	printf "%-20s" $@
 
 	#-------------res-------------
-	./minishell		< $@ 2> /dev/null > tmp/res
+	./minishell		< tests/$@ 2> /dev/null > tmp/res
 	echo exit status $? 1>> tmp/res
 
 	#-------------ref-------------
-	bash			< $@ 2> /dev/null > tmp/ref
+	bash			< tests/$@ 2> /dev/null > tmp/ref
 	echo exit status $? 1>> tmp/ref
 
 	#-------------cmp-------------
 	diff tmp/ref tmp/res > tmp/diff
 	if [ -s tmp/diff ]; then 
 		printf "$RED[ KO ]\n$NOCOLOR"
-		echo "you failed at" $@
-		echo "please check your trace in /trace/" $@
-		echo "diff :"
-		cat tmp/diff > trace/$@_diff
-		cat tmp/res > trace/$@_your_output
-		cat tmp/res > trace/$@_ref_output
+		mkdir trace/$@
+		echo "please check your trace in /trace/$@/"
+		cat tmp/diff > trace/$@/diff
+		cat tmp/res > trace/$@/your_output
+		cat tmp/res > trace/$@/ref_output
 	else
 		printf "$GRE[ OK ]\n$NOCOLOR"
 	fi

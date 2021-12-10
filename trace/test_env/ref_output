@@ -1,2 +1,22 @@
-65
+SHLVL VALUE : 3
+66
+test   test
+"test
+
+
+$TEST
+
+=lol
+    lol 
+
+=lollol
+lol
+test  test  test
+$TEST
+$=TEST
+$
+0TEST
+
+TEST
+
 exit status 0

@@ -1,5 +1,23 @@
-unset _
+echo SHLVL VALUE : $SHLVL
+_=/usr/bin/env
 env | wc -l
-echo "test 6 lets go" >> test6
-echo SHLVL VALUE : $SHLVL >> test6
-env >> test6
+
+echo test     \    test
+echo \"test
+echo $TEST
+echo "$TEST"
+echo '$TEST'
+echo "$TEST$TEST$TEST"
+echo "$TEST$TEST=lol$TEST"
+echo "   $TEST lol $TEST"
+echo $TEST$TEST$TEST
+echo $TEST$TEST=lol$TEST""lol
+echo    $TEST lol $TEST
+echo test "" test "" test
+echo "\$TEST"
+echo "$=TEST"
+echo "$"
+echo "$?TEST"
+echo $TEST $TEST
+echo "$1TEST"
+echo "$T1TEST"

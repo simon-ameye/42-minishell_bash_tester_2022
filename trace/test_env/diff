@@ -1,4 +1,9 @@
-1c1
-< 66
+3,4c3
+< test   test
+< "test
 ---
-> 65
+> test \ test
+15c14
+< $TEST
+---
+> \

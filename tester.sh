@@ -14,7 +14,6 @@ mkdir trace
 function test()
 {
 	mkdir tmp
-	#echo ------------------$@------------------
 	printf "%-20s" $@
 
 	#-------------res-------------
@@ -22,7 +21,7 @@ function test()
 	echo exit status $? 1>> tmp/res
 
 	#-------------ref-------------
-	bash			< tests/$@ 2> /dev/null > tmp/ref
+	bash --posix	< tests/$@ 2> /dev/null > tmp/ref
 	echo exit status $? 1>> tmp/ref
 
 	#-------------cmp-------------
@@ -33,7 +32,7 @@ function test()
 		echo "please check your trace in /trace/$@/"
 		cat tmp/diff > trace/$@/diff
 		cat tmp/res > trace/$@/your_output
-		cat tmp/res > trace/$@/ref_output
+		cat tmp/ref > trace/$@/ref_output
 	else
 		printf "$GRE[ OK ]\n$NOCOLOR"
 	fi
@@ -43,12 +42,12 @@ function test()
 
 test "test_echo"
 test "test_cd"
-test "test_pipe"
 test "test_expand"
 test "test_export"
 test "test_env"
 test "test_redirect"
 test "test_exit"
+test "test_pipe"
 test "test_multi"
 
 rm minishell

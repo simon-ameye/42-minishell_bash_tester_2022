@@ -1,4 +1,6 @@
-2,107c2
+1,135c1
+< jhjbsdc
+< jhjbsdc
 < minishell
 < test6
 < test_cd
@@ -14,8 +16,7 @@
 < tmp
 < tmp1
 < trace
-< -------------------2-------------------
-< hello
+< kjnsdc sdc sddc knsdc sdc sdcsdc
 < minishell
 < test6
 < test_cd
@@ -30,9 +31,22 @@
 < test_redirect
 < tmp
 < tmp1
-< tmp2
 < trace
-< -------------------3-------------------
+< minishell
+< test6
+< test_cd
+< test_echo
+< test_env
+< tester.sh
+< test_exit
+< test_expand
+< test_export
+< test_multi
+< test_pipe
+< test_redirect
+< tmp
+< tmp1
+< trace
 < minishell
 < test6
 < test_cd
@@ -48,7 +62,6 @@
 < tmp
 < tmp1
 < tmp2
-< tmp3
 < trace
 < #!/bin/bash
 < 
@@ -104,6 +117,22 @@
 < test "test_exit"
 < test "test_multi"
 < 
-< rm minishellexit status 0
+< rm minishellminishell
+< test6
+< test_cd
+< test_echo
+< test_env
+< tester.sh
+< test_exit
+< test_expand
+< test_export
+< test_multi
+< test_pipe
+< test_redirect
+< tmp
+< tmp1
+< tmp2
+< trace
+< exit status 0
 ---
 > exit status 134

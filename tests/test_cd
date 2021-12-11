@@ -16,8 +16,6 @@ cd ./././
 echo $?
 cd /
 echo $?
-cd '/////' 2>/dev/null 
-echo $?
 cd '/etc' 
 echo $?
 cd '/var' 

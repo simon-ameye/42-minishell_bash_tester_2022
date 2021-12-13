@@ -2,14 +2,14 @@
 
 ###USER SETINGS###
 minishell_dir=../42-minishell-lexer/
-FORCE_TRACE_OUTPUT=1
+FORCE_TRACE_OUTPUT=0
 VALGRIND_LEAKS_CKECK=0
 
 ###ADVANCED SETTINGS###
 RED='\033[0;31m'
 GRE='\033[0;32m'
 NOCOLOR='\033[0m'
-VALGRIND = 'valgrind --undef-value-errors=no'
+VALGRIND='valgrind --undef-value-errors=no'
 
 ###FILES MANAGEMENT###
 make minishell -C $minishell_dir > /dev/null

@@ -9,13 +9,15 @@ VALGRIND_LEAKS_CKECK=0
 RED='\033[0;31m'
 GRE='\033[0;32m'
 NOCOLOR='\033[0m'
-VALGRIND='valgrind --undef-value-errors=no'
+VALGRIND="valgrind --undef-value-errors=no --log-file=tmp/valgrind"
 
 ###FILES MANAGEMENT###
 make minishell -C $minishell_dir > /dev/null
 cp $minishell_dir/minishell .
 rm -rf trace
-mkdir trace
+rm -rf tmp
+mkdir trace > /dev/null
+mkdir tmp > /dev/null
 
 ###TEST FUNCTION###
 function execute_file()
@@ -33,27 +35,45 @@ function execute_file()
 	echo program exit status $? 1>> tmp/ref
 }
 
+function save_outputs()
+{
+	mkdir trace/$@ > /dev/null
+	cat tmp/diff > trace/$@/diff
+	cat tmp/res > trace/$@/your_output
+	cat tmp/ref > trace/$@/ref_output
+}
+
+function save_valgrind()
+{
+	mkdir trace/$@ > /dev/null
+	cat tmp/valgrind > trace/$@/valgrind
+}
+
 function compare_and_print()
 {
 	#-------------cmp-------------
 	diff tmp/ref tmp/res > tmp/diff
 	if [ -s tmp/diff ]; then							#error spotted
 		printf "$RED[ KO ]$NOCOLOR"
-		mkdir trace/$@
-		echo " (please check /trace/$@/)"
-		cat tmp/diff > trace/$@/diff
-		cat tmp/res > trace/$@/your_output
-		cat tmp/ref > trace/$@/ref_output
+		save_outputs "$@"
 	elif [ $FORCE_TRACE_OUTPUT -eq 1 ]; then			#no error but force_output setting
 		printf "$GRE[ OK ]$NOCOLOR"
-		mkdir trace/$@
-		echo " (please check /trace/$@/)"
-		cat tmp/diff > trace/$@/diff
-		cat tmp/res > trace/$@/your_output
-		cat tmp/ref > trace/$@/ref_output
+		save_outputs "$@"
 	else												#no error
-		printf "$GRE[ OK ]\n$NOCOLOR"
+		printf "$GRE[ OK ]$NOCOLOR"
 	fi
+
+	if [ -s tmp/valgrind ]; then
+		printf "$RED[ LEAK KO ]$NOCOLOR"
+		save_valgrind $@
+	else
+		printf "$GRE[ LEAK OK ]$NOCOLOR"
+	fi
+
+	if [ -d "trace/$@" ]; then
+		echo -n " (please check /trace/$@/)"
+	fi
+	echo
 	#-------------del-------------
 	rm -rf tmp/
 }

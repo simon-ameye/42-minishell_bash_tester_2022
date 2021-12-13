@@ -1,0 +1,21 @@
+echo hello > tmp1
+cat << eof > tmp1
+bonjour
+je
+suis
+simon
+eof
+echo -----1------
+cat tmp1
+cat << $USER > tmp1
+yo
+yes
+hey
+$USER
+oooijj
+
+
+
+
+
+rm tmp1

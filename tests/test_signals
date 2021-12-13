@@ -1,0 +1,3 @@
+# Terminates the program (like Ctrl+C)
+echo hello
+kill -INT 888

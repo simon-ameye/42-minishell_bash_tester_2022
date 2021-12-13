@@ -2,7 +2,7 @@
 
 ###USER SETINGS###
 minishell_dir=../42-minishell-lexer/
-FORCE_TRACE_OUTPUT=0
+FORCE_TRACE_OUTPUT=1
 VALGRIND_LEAKS_CKECK=0
 
 ###ADVANCED SETTINGS###
@@ -71,7 +71,7 @@ function compare_and_print()
 			printf "$GRE[ LEAK OK ]$NOCOLOR"
 		fi
 	fi
-	
+
 	if [ -d "trace/$@" ]; then
 		echo -n " (please check /trace/$@/)"
 	fi
@@ -103,15 +103,16 @@ function test_file_line_by_line()
 }
 
 ###TEST FILES###
-test_file "test_echo"
-test_file "test_cd"
-test_file "test_expand"
-test_file "test_export"
-test_file "test_env"
-test_file "test_redirect"
-test_file "test_pipe"
-test_file "test_multi"
-test_file "test_heredoc"
-test_file_line_by_line "test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
+test_file				"test_echo"
+test_file				"test_cd"
+test_file				"test_expand"
+test_file				"test_export"
+test_file				"test_env"
+test_file				"test_redirect"
+test_file				"test_pipe"
+test_file				"test_multi"
+test_file				"test_heredoc"
+#test_file_line_by_line	"test_signals"
+test_file_line_by_line	"test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
 
-rm minishell
+#rm minishell

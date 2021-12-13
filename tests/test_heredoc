@@ -1,21 +1,49 @@
+
 echo hello > tmp1
-cat << eof > tmp1
+echo -----1------
+cat << '$USER' > tmp1
 bonjour
 je
 suis
-simon
-eof
-echo -----1------
-cat tmp1
-cat << $USER > tmp1
-yo
-yes
-hey
+'$USER'
+"$USER"
 $USER
-oooijj
+cat tmp1
 
+echo -----2------
+cat << $USER > tmp1
+bonjour
+je
+suis
+'$USER'
+"$USER"
+$USER
+cat tmp1
 
+echo -----3------
+cat << $AAAAAAAA > tmp1
+bonjour
+je
+suis
+'$USER'
+"$USER"
+$USER
+$AAAAAAAAAAAAAAAAAA
+$AAAAAAAA
+cat tmp1
 
+echo -----4------
+cat << "hello'ksdcksd'ckdsc'""""""'"kjbsdckj'"fddvdf"vdfvdfv'bsdc > tmp1
+bonjour
+je
+suis
+'$USER'
+"$USER"
+$USER
+$AAAAAAAAAAAAAAAAAA
+$AAAAAAAA
+"hello'ksdcksd'ckdsc'""""""'"kjbsdckj'"fddvdf"vdfvdfv'bsdc
+hello'ksdcksd'ckdsc''kjbsdckj"fddvdf"vdfvdfvbsdc
 
-
+cat tmp1
 rm tmp1

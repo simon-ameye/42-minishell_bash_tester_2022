@@ -9,7 +9,6 @@ VALGRIND_LEAKS_CKECK=0
 RED='\033[0;31m'
 GRE='\033[0;32m'
 NOCOLOR='\033[0m'
-
 VALGRIND = 'valgrind --undef-value-errors=no'
 
 ###FILES MANAGEMENT###
@@ -19,7 +18,6 @@ rm -rf trace
 mkdir trace
 
 ###TEST FUNCTION###
-
 function execute_file()
 {
 	#-------------res-------------
@@ -39,7 +37,7 @@ function compare_and_print()
 {
 	#-------------cmp-------------
 	diff tmp/ref tmp/res > tmp/diff
-	if [ -s tmp/diff ]; then					#error spotted
+	if [ -s tmp/diff ]; then							#error spotted
 		printf "$RED[ KO ]$NOCOLOR"
 		mkdir trace/$@
 		echo " (please check /trace/$@/)"
@@ -53,7 +51,7 @@ function compare_and_print()
 		cat tmp/diff > trace/$@/diff
 		cat tmp/res > trace/$@/your_output
 		cat tmp/ref > trace/$@/ref_output
-	else										#no error
+	else												#no error
 		printf "$GRE[ OK ]\n$NOCOLOR"
 	fi
 	#-------------del-------------
@@ -91,7 +89,6 @@ test_file "test_env"
 test_file "test_redirect"
 test_file "test_pipe"
 test_file "test_multi"
-test_file_line_by_line "test_exit"
-
+test_file_line_by_line "test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
 
 rm minishell

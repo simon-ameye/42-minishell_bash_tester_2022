@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                     ____     _____         */
+/*                                                    /\   \  /      \        */
+/*   ft_split.c                                       \ \   \/   /_\  \       */
+/*                                                     \ \             \      */
+/*   By: trobin <trobin@student.42.fr>                  \ \    __       \     */
+/*   By: sameye <sameye@student.42.fr>                   \ \   \/   /\   \    */
+/*   Created: 2021/10/25 13:44:43 by sameye          	  \ \______/\ \___\   */
+/*   Updated: 2021/11/08 18:26:47 by sameye                \/_____/  \/___/   */
+/*                                                                            */
+/* ************************************************************************** */
 #!/bin/bash
 
 ###USER SETINGS###
@@ -52,13 +63,13 @@ function save_valgrind()
 function check_valgrind_leak()
 {
 	VALGRIND_FILE="tmp/valgrind"
-	if 		grep -q "definitely lost: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
+	if 		! grep -q -c "definitely lost: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
 		VALGRIND_LEAK=1
-	elif 	grep -q "indirectly lost: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
+	elif 	! grep -q -c "indirectly lost: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
 		VALGRIND_LEAK=1
-	elif 	grep -q "possibly lost: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
+	elif 	! grep -q -c "possibly lost: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
 		VALGRIND_LEAK=1
-	elif 	grep -q "still reachable: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
+	elif 	! grep -q -c "still reachable: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
 		VALGRIND_LEAK=1
 	else
 		VALGRIND_LEAK=0
@@ -132,7 +143,7 @@ test_file				"test_redirect"
 test_file				"test_pipe"
 test_file				"test_multi"
 test_file				"test_heredoc"
-#test_file_line_by_line	"test_signals"
+test_file_line_by_line	"test_signals"
 test_file_line_by_line	"test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
 
 #rm minishell

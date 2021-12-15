@@ -21,3 +21,4 @@ echo ----6----
 cat<tester.sh<jnsdc ssdjcnnj>tmp2
 ls
 rm tmp1 tmp2
+exit

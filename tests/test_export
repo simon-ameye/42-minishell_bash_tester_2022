@@ -12,3 +12,4 @@ echo $lol
 echo $?
 
 echo $?
+exit

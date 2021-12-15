@@ -50,3 +50,4 @@ exit something somethingv2
 exit 42 42 42 42 42 
 exit echo something 
 exit exit
+exit

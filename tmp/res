@@ -1,6 +1,0 @@
-cat tests/test_pipe | grep arcu | cat -e$
-0
-130
-130
-130
-program exit status 0

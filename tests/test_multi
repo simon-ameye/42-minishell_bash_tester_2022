@@ -64,3 +64,4 @@ whereis grep > tmp/file
 whereis grep > tmp/file
 ls  > tmp/file
 ls  > tmp/file 
+exit

@@ -139,3 +139,4 @@ echo $?
 echo "text" "text$USER" ... "$USER"
 echo $?
 echo $PWD
+exit

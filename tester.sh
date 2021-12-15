@@ -1,16 +1,16 @@
 #!/bin/bash
 
 ###USER SETINGS###
-minishell_dir=../42-minishell-lexer/
+minishell_dir=../42-minishell/
 FORCE_TRACE_OUTPUT=1
-VALGRIND_LEAKS_CKECK=0
+VALGRIND_LEAKS_CKECK=1
 
 ###ADVANCED SETTINGS###
 RED='\033[0;31m'
 GRE='\033[0;32m'
 NOCOLOR='\033[0m'
-VALGRIND="valgrind --undef-value-errors=no --log-file=tmp/valgrind --leak-check=full --show-leak-kinds=all"
-
+#VALGRIND="valgrind --undef-value-errors=no --log-file=tmp/valgrind --leak-check=full --show-leak-kinds=definite,indirect"
+VALGRIND="valgrind --log-file=tmp/valgrind --suppressions=valgrind_filter.supp --leak-check=full --show-leak-kinds=all --trace-children=yes  --track-fds=yes"
 ###FILES MANAGEMENT###
 make minishell -C $minishell_dir > /dev/null
 cp $minishell_dir/minishell .
@@ -49,6 +49,26 @@ function save_valgrind()
 	cat tmp/valgrind > trace/$@/valgrind
 }
 
+function check_valgrind_leak()
+{
+	VALGRIND_FILE="tmp/valgrind"
+	STRING="definitely lost: 0 bytes in 0 blocks"
+	if grep -q "$STRING" "$VALGRIND_FILE"; then
+		VALGRIND_LEAK=1
+	STRING="indirectly lost: 0 bytes in 0 blocks"
+	elif grep -q "$STRING" "$VALGRIND_FILE"; then
+		VALGRIND_LEAK=1
+	STRING="possibly lost: 0 bytes in 0 blocks"
+	elif grep -q "$STRING" "$VALGRIND_FILE"; then
+		VALGRIND_LEAK=1
+	STRING="still reachable: 0 bytes in 0 blocks"
+	elif grep -q "$STRING" "$VALGRIND_FILE"; then
+		VALGRIND_LEAK=1
+	else
+		VALGRIND_LEAK=0
+	fi
+}
+
 function compare_and_print()
 {
 	#-------------cmp-------------
@@ -64,7 +84,8 @@ function compare_and_print()
 	fi
 
 	if [ $VALGRIND_LEAKS_CKECK -eq 1 ]; then
-		if [ -s tmp/valgrind ]; then
+		check_valgrind_leak
+		if [ $VALGRIND_LEAK -eq 1 ]; then
 			printf "$RED[ LEAK KO ]$NOCOLOR"
 			save_valgrind $@
 		else

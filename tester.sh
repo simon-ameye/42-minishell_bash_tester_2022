@@ -52,17 +52,13 @@ function save_valgrind()
 function check_valgrind_leak()
 {
 	VALGRIND_FILE="tmp/valgrind"
-	STRING="definitely lost: 0 bytes in 0 blocks"
-	if grep -q "$STRING" "$VALGRIND_FILE"; then
+	if 		grep -q "definitely lost: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
 		VALGRIND_LEAK=1
-	STRING="indirectly lost: 0 bytes in 0 blocks"
-	elif grep -q "$STRING" "$VALGRIND_FILE"; then
+	elif 	grep -q "indirectly lost: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
 		VALGRIND_LEAK=1
-	STRING="possibly lost: 0 bytes in 0 blocks"
-	elif grep -q "$STRING" "$VALGRIND_FILE"; then
+	elif 	grep -q "possibly lost: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
 		VALGRIND_LEAK=1
-	STRING="still reachable: 0 bytes in 0 blocks"
-	elif grep -q "$STRING" "$VALGRIND_FILE"; then
+	elif 	grep -q "still reachable: 0 bytes in 0 blocks" "$VALGRIND_FILE"; then
 		VALGRIND_LEAK=1
 	else
 		VALGRIND_LEAK=0
@@ -83,10 +79,13 @@ function compare_and_print()
 		printf "$GRE[ OK ]$NOCOLOR"
 	fi
 
-	if [ $VALGRIND_LEAKS_CKECK -eq 1 ]; then
+	if [ $VALGRIND_LEAKS_CKECK -eq 1 ] || [ $FORCE_TRACE_OUTPUT -eq 1 ]; then
 		check_valgrind_leak
 		if [ $VALGRIND_LEAK -eq 1 ]; then
 			printf "$RED[ LEAK KO ]$NOCOLOR"
+			save_valgrind $@
+		elif [ $FORCE_TRACE_OUTPUT -eq 1 ]; then
+			printf "$GRE[ LEAK OK ]$NOCOLOR"
 			save_valgrind $@
 		else
 			printf "$GRE[ LEAK OK ]$NOCOLOR"

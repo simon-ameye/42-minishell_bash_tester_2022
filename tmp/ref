@@ -1,0 +1,13 @@
+cat tests/test_pipe | grep arcu | cat -e$
+0
+test$$$$$$$$$$$$$$$$$$$$$$$
+0
+100
+0
+minishell
+test
+tester.sh
+tests
+tmp
+trace
+valgrind_filter.supp

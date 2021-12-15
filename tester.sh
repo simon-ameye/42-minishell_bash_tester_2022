@@ -15,7 +15,7 @@ echo "* ************************************************************************
 ###USER SETINGS###
 minishell_dir=../42-minishell/
 FORCE_TRACE_OUTPUT=1
-VALGRIND_LEAKS_CKECK=1
+VALGRIND_LEAKS_CKECK=0
 
 ###ADVANCED SETTINGS###
 RED='\033[0;31m'

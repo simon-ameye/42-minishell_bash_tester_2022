@@ -1,14 +1,15 @@
-/* ************************************************************************** */
-/*                                                     ____     _____         */
-/*                                                    /\   \  /      \        */
-/*   ft_split.c                                       \ \   \/   /_\  \       */
-/*                                                     \ \             \      */
-/*   By: trobin <trobin@student.42.fr>                  \ \    __       \     */
-/*   By: sameye <sameye@student.42.fr>                   \ \   \/   /\   \    */
-/*   Created: 2021/10/25 13:44:43 by sameye          	  \ \______/\ \___\   */
-/*   Updated: 2021/11/08 18:26:47 by sameye                \/_____/  \/___/   */
-/*                                                                            */
-/* ************************************************************************** */
+echo "* ************************************************************************** *"
+echo "*                                                     ____     _____         *"
+echo "*                                                    /\   \  /      \        *"
+echo "*   42-minishell-bash-tester-2022                    \ \   \/   /_\  \       *"
+echo "*                                                     \ \             \      *"
+echo "*   By: trobin <trobin@student.42.fr>                  \ \    __       \     *"
+echo "*   By: sameye <sameye@student.42.fr>                   \ \   \/   /\   \    *"
+echo "*                                                        \ \______/\ \___\   *"
+echo "*   Please star out Github !                              \/_____/  \/___/   *"
+echo "*                                                                            *"
+echo "* ************************************************************************** *"
+
 #!/bin/bash
 
 ###USER SETINGS###
@@ -90,7 +91,7 @@ function compare_and_print()
 		printf "$GRE[ OK ]$NOCOLOR"
 	fi
 
-	if [ $VALGRIND_LEAKS_CKECK -eq 1 ] || [ $FORCE_TRACE_OUTPUT -eq 1 ]; then
+	if [ $VALGRIND_LEAKS_CKECK -eq 1 ]; then
 		check_valgrind_leak
 		if [ $VALGRIND_LEAK -eq 1 ]; then
 			printf "$RED[ LEAK KO ]$NOCOLOR"
@@ -102,7 +103,6 @@ function compare_and_print()
 			printf "$GRE[ LEAK OK ]$NOCOLOR"
 		fi
 	fi
-
 	if [ -d "trace/$@" ]; then
 		echo -n " (please check /trace/$@/)"
 	fi
@@ -143,7 +143,7 @@ test_file				"test_redirect"
 test_file				"test_pipe"
 test_file				"test_multi"
 test_file				"test_heredoc"
-test_file_line_by_line	"test_signals"
+#test_file_line_by_line	"test_signals"
 test_file_line_by_line	"test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
 
 #rm minishell

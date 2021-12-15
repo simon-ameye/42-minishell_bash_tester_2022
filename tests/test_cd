@@ -49,3 +49,4 @@ echo $?
 cd $PWD/file_tests 
 echo $?
 cd $OLDPWD/something 
+exit

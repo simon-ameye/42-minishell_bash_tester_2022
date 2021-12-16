@@ -49,4 +49,6 @@ echo $?
 cd $PWD/file_tests 
 echo $?
 cd $OLDPWD/something 
+rm tmp1 tmp2 tmp3 tmp4 tmp5
+
 exit

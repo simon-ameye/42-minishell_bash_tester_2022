@@ -139,4 +139,6 @@ echo $?
 echo "text" "text$USER" ... "$USER"
 echo $?
 echo $PWD
+rm tmp1 tmp2 tmp3 tmp4 tmp5
+
 exit

@@ -1,2 +1,2 @@
 kill -INT 888
-exit
+echo hello | kill -INT 888

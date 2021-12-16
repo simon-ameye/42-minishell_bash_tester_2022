@@ -47,4 +47,6 @@ hello'ksdcksd'ckdsc''kjbsdckj"fddvdf"vdfvdfvbsdc
 
 cat tmp1
 rm tmp1
+rm tmp1 tmp2 tmp3 tmp4 tmp5
+
 exit

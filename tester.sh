@@ -1,21 +1,21 @@
-echo "* ************************************************************************** *"
-echo "*                                                     ____     _____         *"
-echo "*                                                    /\   \  /      \        *"
-echo "*   42-minishell-bash-tester-2022                    \ \   \/   /_\  \       *"
-echo "*                                                     \ \             \      *"
-echo "*   By: trobin <trobin@student.42.fr>                  \ \    __       \     *"
-echo "*   By: sameye <sameye@student.42.fr>                   \ \   \/   /\   \    *"
-echo "*                                                        \ \______/\ \___\   *"
-echo "*   Please star out Github !                              \/_____/  \/___/   *"
-echo "*                                                                            *"
-echo "* ************************************************************************** *"
+echo "* **************************************************************** *"
+echo "*                                           ____    ______         *"
+echo "*   42-minishell-bash-tester-2022          /\   \  /   _  \        *"
+echo "*                                          \ \   \/   /_\  \       *"
+echo "*   By: trobin <trobin@student.42.fr>       \ \             \      *"
+echo "*   By: sameye <sameye@student.42.fr>        \ \   ___       \     *"
+echo "*                                             \ \  \_/   /\   \    *"
+echo "*                                              \ \______/\ \___\   *"
+echo "*   Please star our Github !                    \/_____/  \/___/   *"
+echo "*   https://github.com/simon-ameye/42-minishell-bash-tester-2022   *"
+echo "* **************************************************************** *"
 
 #!/bin/bash
 
 ###USER SETINGS###
 minishell_dir=../42-minishell/
 FORCE_TRACE_OUTPUT=1
-VALGRIND_LEAKS_CKECK=0
+VALGRIND_LEAKS_CKECK=1
 
 ###ADVANCED SETTINGS###
 RED='\033[0;31m'
@@ -134,16 +134,16 @@ function test_file_line_by_line()
 }
 
 ###TEST FILES###
-test_file				"test_echo"
-test_file				"test_cd"
+#test_file				"test_echo"
+#test_file				"test_cd"
 test_file				"test_expand"
-test_file				"test_export"
-test_file				"test_env"
-test_file				"test_redirect"
-test_file				"test_pipe"
-test_file				"test_multi"
-test_file				"test_heredoc"
+#test_file				"test_export"
+#test_file				"test_env"
+#test_file				"test_redirect"
+#test_file				"test_pipe"
+#test_file				"test_multi"
+#test_file				"test_heredoc"
 #test_file_line_by_line	"test_signals"
-test_file_line_by_line	"test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
+#test_file_line_by_line	"test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
 
 #rm minishell

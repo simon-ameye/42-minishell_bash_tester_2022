@@ -24,4 +24,5 @@ echo "$1TEST"
 echo "$T1TEST"
 export CHEVRON=">"
 echo bla $CHEVRON yo
+ls
 exit

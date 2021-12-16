@@ -23,8 +23,6 @@ echo ----2----
 echo "$ "
 echo ----2----
 echo "$ f"
-echo ----3----
-echo " $"
 echo ----4----
 echo " $ "
 echo ----4----

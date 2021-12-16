@@ -1,3 +1,6 @@
+rm tmp1 tmp2 tmp3 tmp4 tmp5
+
+sleep 0.1
 echo -------------------1-------------------
 echo $?
 echo hello > tmp1
@@ -33,7 +36,6 @@ echo $?
 echo $?
 rm tmp1 tmp2 tmp3
 
-
 echo "THANKS TO https://github.com/thallard/minishell_tester, tu geres bro !"
 env | grep "SHLVL"
 echo oui | cat -e
@@ -63,5 +65,8 @@ cat tmp1
 cat tmp2
 ls  > tmp1
 ls  < tmp1
+cat tmp1
+unset PATH
+ls | ls | ls
 rm tmp1 tmp2 tmp3 tmp4 tmp5
 exit

@@ -1,23 +1,48 @@
 unset _
 
 export TESTFCGFCSGFC
+echo $?
 export TESTNBKJNLJ='rferfh$re"f'
+echo $?
 export TESTNBKJNLJdgf="'rferfh$ref'"
+echo $?
 export TESTNBKJNLJtcfgvhjbk="rferfh$re'f"
+echo $?
 export =
+echo $?
 export 1TESTHBGUHBUHB=
-export TESTOUHOSIOUNXJKNK
+echo $?
+export TESTOUHOSIOUNXJKNK 34khh -deded
+echo $?
 export ""=""
+echo $?
 export "="
+echo $?
+export TESTFGCHVJKNLJKHVJGCHFGVJBKNL2='"'
+echo $?
+export TESTFGCHVJKNLJKHVJGCHFGVJBKNL3="'"
+echo $?
+export TESTFGCHVJKNLJKHVJGCHFGVJBKNL4="$"
+echo $?
 export "$"
+echo $?
 export TESTJHBSJCBJHSC111=T=""
+echo $?
 export TESTNJNCKJDCKDCKDJN222+S=T=""
+echo $?
 export TESTKXSLXSLX333=LOL 
+echo $?
 export TESTYGVSBNJKHBXGJHN444=LOL 
+echo $?
 export TESTREDTUHINJO555=LOL
+echo $?
 export TESTYRFTGUIHUJOKL666=lol
+echo $?
 export TESTYRFTGUIHUJOKL666=LOLdfgtgh
+echo $?
 export TESTYTFUGYHIUNJ777="ls       -l     - a" 
+echo $?
+
 export | grep TEST
 env | grep TEST | sort
 

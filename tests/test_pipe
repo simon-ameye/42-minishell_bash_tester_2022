@@ -6,4 +6,5 @@ cat /dev/urandom | head -c 100 | wc -c
 echo $?
 ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls|ls
 echo $?
+rm tmp1 tmp2 tmp3 tmp4 tmp5
 exit

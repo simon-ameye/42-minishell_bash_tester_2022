@@ -44,9 +44,63 @@ $AAAAAAAAAAAAAAAAAA
 $AAAAAAAA
 "hello'ksdcksd'ckdsc'""""""'"kjbsdckj'"fddvdf"vdfvdfv'bsdc
 hello'ksdcksd'ckdsc''kjbsdckj"fddvdf"vdfvdfvbsdc
+cat tmp1
 
+
+
+
+echo -----5------
+cat << "b$" > tmp1
+bonjour
+je
+suis
+'$USER'
+"$USER"
+$USER
+$AAAAAAAAAAAAAAAAAA
+$AAAAAAAA
+"$"
+""
+$
+b$
 cat tmp1
 rm tmp1
+
+echo -----UUUUUUUUUUUU------
+cat << "$" > tmp1
+bonjour
+je
+suis
+'$USER'
+"$USER"
+$""
+$USER
+$AAAAAAAAAAAAAAAAAA
+$AAAAAAAA
+"$"
+""
+$
+cat tmp1
+rm tmp1
+
+echo -----5------
+cat << $"" > tmp1
+bonjour
+je
+suis
+'$USER'
+"$USER"
+$""
+$USER
+$AAAAAAAAAAAAAAAAAA
+$AAAAAAAA
+"$"
+""
+$
+cat tmp1
+rm tmp1
+
 rm tmp1 tmp2 tmp3 tmp4 tmp5
 
 exit
+

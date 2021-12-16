@@ -1,3 +1,4 @@
+rm tmp1 tmp2
 echo ----1----
 echo jhjbsdc >> tmp1
 cat tmp1

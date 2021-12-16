@@ -1,15 +1,24 @@
 unset _
-echo $?
-export kjbsdc
-echo $?
-export
-echo $?
 
-echo $?
-export lol='ahah$lol'
-echo $?
-echo $lol
-echo $?
+export TESTFCGFCSGFC
+export TESTNBKJNLJ='rferfh$re"f'
+export TESTNBKJNLJdgf="'rferfh$ref'"
+export TESTNBKJNLJtcfgvhjbk="rferfh$re'f"
+export =
+export 1TESTHBGUHBUHB=
+export TESTOUHOSIOUNXJKNK
+export ""=""
+export "="
+export "$"
+export TESTJHBSJCBJHSC111=T=""
+export TESTNJNCKJDCKDCKDJN222+S=T=""
+export TESTKXSLXSLX333=LOL 
+export TESTYGVSBNJKHBXGJHN444=LOL 
+export TESTREDTUHINJO555=LOL
+export TESTYRFTGUIHUJOKL666=lol
+export TESTYRFTGUIHUJOKL666=LOLdfgtgh
+export TESTYTFUGYHIUNJ777="ls       -l     - a" 
+export | grep TEST
+env | grep TEST | sort
 
-echo $?
 exit

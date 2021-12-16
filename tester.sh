@@ -15,14 +15,14 @@ echo "* **************************************************************** *"
 ###USER SETINGS###
 minishell_dir=../42-minishell/
 FORCE_TRACE_OUTPUT=1
-VALGRIND_LEAKS_CKECK=1
+VALGRIND_LEAKS_CKECK=0
 
 ###ADVANCED SETTINGS###
 RED='\033[0;31m'
 GRE='\033[0;32m'
 NOCOLOR='\033[0m'
-#VALGRIND="valgrind --undef-value-errors=no --log-file=tmp/valgrind --leak-check=full --show-leak-kinds=definite,indirect"
 VALGRIND="valgrind --log-file=tmp/valgrind --suppressions=valgrind_filter.supp --leak-check=full --show-leak-kinds=all --trace-children=yes  --track-fds=yes"
+
 ###FILES MANAGEMENT###
 make minishell -C $minishell_dir > /dev/null
 cp $minishell_dir/minishell .
@@ -134,16 +134,16 @@ function test_file_line_by_line()
 }
 
 ###TEST FILES###
-#test_file				"test_echo"
-#test_file				"test_cd"
+test_file				"test_echo"
+test_file				"test_cd"
 test_file				"test_expand"
-#test_file				"test_export"
-#test_file				"test_env"
-#test_file				"test_redirect"
-#test_file				"test_pipe"
-#test_file				"test_multi"
-#test_file				"test_heredoc"
-#test_file_line_by_line	"test_signals"
-#test_file_line_by_line	"test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
+test_file				"test_export"
+test_file				"test_env"
+test_file				"test_redirect"
+test_file				"test_pipe"
+test_file				"test_multi"
+test_file				"test_heredoc"
+test_file_line_by_line	"test_signals"
+test_file_line_by_line	"test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
 
 #rm minishell

@@ -1,6 +1,6 @@
-echo SHLVL VALUE : $SHLVL
-_=/usr/bin/env
-env | wc -l
+export $SHLVL=42
+export _=/usr/bin/env
+env | wc -l | sort
 
 export TEST=BLA
 echo test        test
@@ -17,7 +17,32 @@ echo    $TEST lol $TEST
 echo test "" test "" test
 echo "$TEST"
 echo "$=TEST"
+echo ----1----
 echo "$"
+echo ----2----
+echo "$ "
+echo ----2----
+echo "$ f"
+echo ----3----
+echo " $"
+echo ----4----
+echo " $ "
+echo ----4----
+echo " $ $USER"
+echo ----5----
+echo ""$
+echo ----6----
+echo $""
+echo ----6----
+echo $''
+echo ----7----
+echo "$"""
+echo ----8----
+echo "$"XX""
+echo ----9----
+echo X"$"""
+echo ----0----
+echo X'"$"""'
 echo "$?TEST"
 echo $TEST $TEST
 echo "$1TEST"
@@ -26,3 +51,7 @@ export CHEVRON=">"
 echo bla $CHEVRON yo
 ls
 exit
+
+Le fameux cas impossible :
+echo ----3----
+echo " $"

@@ -9,7 +9,7 @@ cat < tmp1 | cat < tmp2
 echo $?
 ls
 echo $?
-
+/bin/lsa
 echo $?
 echo -------------------2-------------------
 echo $?

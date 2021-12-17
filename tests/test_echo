@@ -1,3 +1,5 @@
+
+echo $?
 echo hello
 echo $?
 echo exit

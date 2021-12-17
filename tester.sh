@@ -144,6 +144,7 @@ test_file				"test_pipe"
 test_file				"test_multi"
 test_file				"test_heredoc"
 test_file_line_by_line	"test_signals"
+test_file_line_by_line	"test_line_by_line"
 test_file_line_by_line	"test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
 
 #rm minishell

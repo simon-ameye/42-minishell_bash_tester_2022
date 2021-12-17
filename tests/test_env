@@ -1,6 +1,6 @@
 export $SHLVL=42
 export _=/usr/bin/env
-env | wc -l | sort
+env | wc -l
 
 export TEST=BLA
 echo test        test
@@ -17,8 +17,7 @@ echo    $TEST lol $TEST
 echo test "" test "" test
 echo "$TEST"
 echo "$=TEST"
-echo ----1----
-echo "$"
+
 echo ----2----
 echo "$ "
 echo ----2----
@@ -33,12 +32,7 @@ echo ----6----
 echo $""
 echo ----6----
 echo $''
-echo ----7----
-echo "$"""
-echo ----8----
-echo "$"XX""
-echo ----9----
-echo X"$"""
+
 echo ----0----
 echo X'"$"""'
 echo "$?TEST"
@@ -53,3 +47,13 @@ exit
 Le fameux cas impossible :
 echo ----3----
 echo " $"
+
+
+echo ----1----
+echo "$"
+echo ----7----
+echo "$"""
+echo ----8----
+echo "$"XX""
+echo ----9----
+echo X"$"""

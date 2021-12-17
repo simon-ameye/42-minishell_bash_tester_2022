@@ -1,12 +1,6 @@
 echo $
-echo $''
-echo $""
-echo $' '
-echo $" "
-echo $'?'
-echo $"?"
-echo $'? '
-echo $"? "
+
+
 echo " $ "
 echo " $? "
 echo $''$""$' '$" "$'?'$"?"$'? '$"? "" $ "" $? "
@@ -39,4 +33,13 @@ export 'USER'=YO
 echo $'USER'
 exit
 
-
+Stranges cases : not supported
+echo $''
+echo $""
+echo $' '
+echo $" "
+echo $'?'
+echo $"?"
+echo $'? '
+echo $"? "
+echo " $"USER

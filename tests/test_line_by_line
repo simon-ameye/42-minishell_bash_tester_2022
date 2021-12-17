@@ -1,3 +1,4 @@
+echo YOOOOOOOOOOOOOOoo
 | |
 ||
 |||
@@ -9,11 +10,18 @@
 > | <>|<|<>
 > | <
 > |
+echo | smdccsdcds
+| echo hello
+| cat <
+| cat < tester.sh
+echo | echo | $USER<
+>$USER
+> $USER
+
+<<
 
 echo > |
-
-echo	blabla
-
+ls | ls >
 echo > <
 echo $?
 echo << >

@@ -127,6 +127,8 @@ function test_file_line_by_line()
 	file_len=$(cat tests/$@ | wc -l)
 	for i in $(seq 1 $file_len);
 	do
+		echo "echo line $i" > tests/$@_tmp
+		execute_file "$@"_tmp
 		sed -n "$i"p tests/$@ > tests/$@_tmp
 		execute_file "$@"_tmp
 	done

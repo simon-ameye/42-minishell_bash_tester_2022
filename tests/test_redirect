@@ -23,7 +23,7 @@ cat<tester.sh<jnsdc ssdjcnnj>tmp2
 ls
 rm tmp1 tmp2
 echo ----7----
-touch tmp1 | ls >
-ls
+> $USER
+>$USER
+< $USER
 rm tmp1 tmp2
-exit

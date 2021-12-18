@@ -45,6 +45,8 @@ echo $?
 export | grep TEST
 env | grep TEST | sort
 
+export arg='"hello"'
+echo $arg
 
 touch ls
 chmod 777 ls

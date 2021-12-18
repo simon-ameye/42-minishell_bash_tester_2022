@@ -1,10 +1,10 @@
 echo "* **************************************************************** *"
 echo "*                                           ____    ______         *"
-echo "*   42-minishell-bash-tester-2022          /\   \  /   _  \        *"
-echo "*                                          \ \   \/   /_\  \       *"
-echo "*   By: trobin <trobin@student.42.fr>       \ \             \      *"
-echo "*   By: sameye <sameye@student.42.fr>        \ \   ___       \     *"
-echo "*                                             \ \  \_/   /\   \    *"
+echo "*   42-minishell-bash-tester-2022          /\###\  /#:+_+:\        *"
+echo "*                                          \ \##+\/:+:/_\+:\       *"
+echo "*   By: trobin <trobin@student.42.fr>       \ \#:+:+:+: : . \      *"
+echo "*   By: sameye <sameye@student.42.fr>        \ \:+:___: .    \     *"
+echo "*                                             \ \+:\_/.  /\   \    *"
 echo "*                                              \ \______/\ \___\   *"
 echo "*   Please star our Github !                    \/_____/  \/___/   *"
 echo "*   https://github.com/simon-ameye/42-minishell-bash-tester-2022   *"
@@ -14,7 +14,7 @@ echo "* **************************************************************** *"
 
 ###USER SETINGS###
 minishell_dir=../42-minishell/
-FORCE_TRACE_OUTPUT=0
+FORCE_TRACE_OUTPUT=1
 VALGRIND_LEAKS_CKECK=1
 
 ###ADVANCED SETTINGS###

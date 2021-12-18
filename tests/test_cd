@@ -1,3 +1,5 @@
+cd .a
+echo $?
 cd 
 echo $?
 cd .. 
@@ -29,6 +31,9 @@ echo $?
 cd ../../..
 echo $?
 cd "wtf" >/dev/null 
+cd
+cd ../../../../../../../../../../../../../../..
+echo $?
 echo $?
 cd .. 
 echo $?

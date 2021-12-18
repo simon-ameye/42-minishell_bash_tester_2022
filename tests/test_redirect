@@ -1,3 +1,4 @@
+sleep 0.1
 rm tmp1 tmp2
 echo ----1----
 echo jhjbsdc >> tmp1
@@ -26,4 +27,20 @@ echo ----7----
 > $USER
 >$USER
 < $USER
+echo ----8----
+ls >tmp1 > tmp1 >>tmp1
+cat tmp1
+echo $?
+ls >tmp1 > tmp1
+echo $?
+ls >tmp1 >> tmp1 >>tmp1
+echo $?
+ls >tmp1 > tmp1 <tmp1
+echo $?
+echo hello > tmp1
+echo $?
+ls >tmp1 >> tmp1 >>tmp1 | cat
+echo $?
+echo $?
+
 rm tmp1 tmp2

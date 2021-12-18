@@ -45,6 +45,18 @@ echo $?
 export | grep TEST
 env | grep TEST | sort
 
+
+touch ls
+chmod 777 ls
+export ORIGINALPATH=$PATH
+export PATH="$PATH:$PWD"
+ls
+export PATH=$ORIGINALPATH
+export PATH="$PWD:$PATH"
+ls
+rm ls
+
+
 exit
 
 weird case : 

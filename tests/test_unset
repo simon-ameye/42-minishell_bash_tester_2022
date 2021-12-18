@@ -1,0 +1,40 @@
+export TESTrsxydtcfyvgubhnijomkonjbhiugv=bla
+export TESTtdcvhbknlm="YO"
+export TESTjknmlmklnj='kuhkuhk'
+export TESTjkndfv='"kuhku"hk'
+export TESTjkndfvnj='"ku$?hku"hk'
+
+echo $?
+export | grep TEST
+
+unset TESTtdcvhbknlm | unset TESTjknmlmklnj
+echo $?
+export | grep TEST
+
+unset TESTtdcvhbknlm | TESTjknmlmklnj
+echo $?
+export | grep TEST
+
+unset   TESTjkndfv='"kuhku"hk'
+echo $?
+export | grep TEST
+
+unset   _TESTjkndfv=
+echo $?
+export | grep TEST
+
+unset   __TESTjkndfv=
+echo $?
+export | grep TEST
+
+unset 0
+echo $?
+export | grep TEST
+
+unset   567890RFUYGVHBK | unset 65798uhjnk
+echo $?
+export | grep TEST
+
+unset       "TESTrsxydtcfyvgubhnijomkonjbhiugv"
+echo $?
+export | grep TEST

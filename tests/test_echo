@@ -1,4 +1,30 @@
-
+echo -n
+echo $?
+echo -nn
+echo $?
+echo -
+echo $?
+echo --n
+echo $?
+echo "-n"
+echo $?
+echo -n blabla
+echo $?
+echo -nn blabla
+echo $?
+echo - blabla
+echo $?
+echo --n blabla
+echo $?
+echo "-n" blabla
+echo $?
+echo -n ''
+echo $?
+echo -nblabla
+echo $?
+echo""
+echo $?
+echo -n""
 echo $?
 echo hello
 echo $?

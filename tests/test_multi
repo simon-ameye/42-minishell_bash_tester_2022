@@ -49,8 +49,14 @@ cd .. | pwd
 ifconfig | grep ":"
 ifconfig | grep nothing
 whoami | grep $USER
+cat tmp1
 whoami | grep $USER > tmp1
+cat tmp1
 whoami | cat -e | cat -e > tmp1
+cat tmp1
+whoami | grep "$USER'c'" > tmp1
+cat tmp1
+whoami | grep "$USER''" > tmp1
 cat tmp1
 export TEST=123 | cat -e | cat -e
 unset TEST | cat -e
@@ -69,4 +75,17 @@ cat tmp1
 unset PATH
 ls | ls | ls
 rm tmp1 tmp2 tmp3 tmp4 tmp5
+echo -------------------exit-------------------
+echo bla | exit
+echo $?
+echo bla | exit khbsdk
+echo $?
+cat < notexist | exit 42
+echo $?
+exit 42 | cat < notexist
+echo $?
+exit tamere | exit
+echo $?
+exit | exit  1| exit 200
+echo $?
 exit

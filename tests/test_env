@@ -1,6 +1,6 @@
 export $SHLVL=42
 export _=/usr/bin/env
-env | wc -l
+env | grep USER
 
 export TEST=BLA
 echo test        test
@@ -48,7 +48,6 @@ Le fameux cas impossible :
 echo ----3----
 echo " $"
 
-
 echo ----1----
 echo "$"
 echo ----7----
@@ -57,3 +56,6 @@ echo ----8----
 echo "$"XX""
 echo ----9----
 echo X"$"""
+echo ----9----
+env | env
+echo $?

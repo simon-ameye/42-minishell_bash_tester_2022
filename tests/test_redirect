@@ -1,5 +1,5 @@
+rm tmp1 tmp2 sameye
 sleep 0.5
-rm tmp1 tmp2
 echo ----1----
 echo jhjbsdc >> tmp1
 cat tmp1

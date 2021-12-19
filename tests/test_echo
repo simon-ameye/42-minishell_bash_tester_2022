@@ -1,3 +1,9 @@
+echo "'$USER'"
+echo "''"
+echo "'$USER'" "" '' $USER $USERr '"$USER"'
+
+echo $=$=$= $=  $=
+echo $+$+$+  $
 echo -n
 echo $?
 echo -nn

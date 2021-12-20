@@ -43,7 +43,7 @@ function execute_file()
 	echo program exit status $? 1>> tmp/res
 
 	#-------------ref-------------
-	bash --posix				< tests/$@ 2> /dev/null >> tmp/ref
+	bash				< tests/$@ 2> /dev/null >> tmp/ref
 	echo program exit status $? 1>> tmp/ref
 }
 
@@ -146,8 +146,9 @@ test_file				"test_pipe"
 test_file				"test_multi"
 test_file				"test_heredoc"
 test_file				"test_unset"
+test_file				"test_sley"
 test_file_line_by_line	"test_signals"
 test_file_line_by_line	"test_line_by_line"
 test_file_line_by_line	"test_exit"						#as exit retuns, exit file can not be run all in once. Line by line is required
 
-#rm minishell
+rm minishell

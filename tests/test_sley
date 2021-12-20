@@ -1,0 +1,203 @@
+echo "Merci à Sley pour ces tests !! "
+echo --------classic-------
+> test1 echo bla
+echo $?
+>> test1 echo bla
+echo $?
+> test1 << pwd
+echo $?
+bla
+echo $?
+pwd
+echo $?
+cat test1
+
+echo ---------cd----------
+echo $?
+cd ../../../../../..
+pwd
+echo $?
+cd /home/user42/
+pwd
+echo $?
+echo ---1---
+pwd
+echo ---2---
+echo $?
+export HOME=
+echo $?
+pwd
+echo $?
+cd too many arguments
+echo $?
+cd ./
+echo $?
+cd -
+echo $?
+cd a/b
+cd ..
+echo $?
+cd home/..
+echo $?
+
+echo --------echo---------
+echo -n -n -nnnn -nnnnm 	-nnnnm
+echo $?
+echo -n -nnn hello -n 	hello -n
+echo $?
+echo poil | cat -e	poil$
+echo $?
+
+echo --------exit status----------
+cd random_cmd
+echo $?
+cd random_cmd
+echo $?
+cd $?
+echo $?
+./file_that_is_not_an_executable
+echo $?
+cat bla	1
+echo $?
+file_name
+echo $?
+not_cmd
+echo $?
+ls bonjour
+echo $?
+export test=a
+echo $?
+echo $test
+echo $?
+<test1 | <test2
+echo $?
+
+echo --------exit status----------
+$var=test
+echo $?
+var=a
+export $var=test
+echo $var $a
+echo $?
+
+echo --------parsing---------
+""
+echo $?
+echo "\s"
+echo "\\s"
+echo $?
+echo "12\""
+echo $?
+echo "bip | bip ; coyotte > < "
+echo $?
+echo $USER$var\$USER$USER\$USERtest$USER	user42$USERuser42$USERtestuser42
+echo $?
+echo bonjour \
+ls	bonjour
+ls
+echo $?
+$
+echo $?
+$LESS$VAR
+echo $?
+..
+echo $?
+echo '"abc"'
+echo $?
+echo "'abc'"
+echo $?
+echo "" bonjour
+echo $?
+echo[TAB]a
+echo $?
+echo\ a
+echo $?
+export ""  et unset ""
+echo $?
+export "test=ici"=coucou
+echo $test
+echo $?
+export var="cat Makefile | grep >"
+echo $var
+echo $?
+
+echo ---------pipe---------
+cat Makefile | grep pr | head -n 5 | cd file_not_exit
+echo $?
+cat Makefile | grep pr | head -n 5 | hello
+echo $?
+ls | exit
+echo $?
+sleep 5 | exit
+echo $?
+
+echo ---------redir---------
+<a cat <b <c
+<a cat <b <c
+> test1 | echo blabla
+cat hello > test1
+>test1 cat <test2 >>test3
+>a ls <machin >>c >d
+ls
+>test1
+cat test1
+
+echo --------substitution---------
+export var="  truc"
+echo $var
+export var="truc  "
+echo $var | cat -e
+echo "$tests""Makefile"
+echo "$tests"Makefile
+echo "$tests" "Makefile"
+$bla
+echo $var bonjour
+export $var
+export test=123
+echo $test
+export test="  foo    bar  "
+echo $test
+export test="  foo    bar  "
+echo ab$test
+export test="  foo    bar  "
+echo "ab"$test
+export test=" foo   bar "
+echo ab"$test" | cat -e
+export test=" foo   bar "
+echo "$test"
+export test=" foo   bar "
+echo ""$test""
+export test=" foo   bar "
+echo """$test"""
+export var= s\ -la
+l$var
+export var=at
+c$var Makefile
+export loop='bonjour$loop'
+echo $loop
+
+echo --------syntax---------
+echo $?
+echo bonjour
+echo $?
+echo bonjour >  out
+echo $?
+echo bonjour > $test
+echo $?
+echo bonjour > $test w/ test="o1 o2"
+echo $?
+
+echo --------unset---------
+unset PATH
+echo $?
+echo $PATH
+echo $?
+ls
+echo $?
+unset "" test
+echo $?
+unset =
+echo $?
+unset PWD
+echo $?
+echo "END"

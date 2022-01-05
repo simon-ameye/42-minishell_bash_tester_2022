@@ -123,7 +123,7 @@ cat Makefile | grep pr | head -n 5 | hello
 echo $?
 ls | exit
 echo $?
-sleep 5 | exit
+sleep 0.1 | exit
 echo $?
 
 echo ---------redir---------

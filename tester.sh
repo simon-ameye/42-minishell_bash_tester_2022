@@ -43,7 +43,7 @@ function execute_file()
 	echo program exit status $? 1>> tmp/res
 
 	#-------------ref-------------
-	bash				< tests/$@ 2> /dev/null >> tmp/ref
+	bash --posix				< tests/$@ 2> /dev/null >> tmp/ref
 	echo program exit status $? 1>> tmp/ref
 }
 

@@ -26,17 +26,19 @@ echo ---2---
 echo $?
 export HOME=
 echo $?
+echo ---3---
 pwd
 echo $?
 cd too many arguments
 echo $?
+echo ---4---
 cd ./
 echo $?
-cd -
-echo $?
+echo ---5---
 cd a/b
 cd ..
 echo $?
+echo ---6---
 cd home/..
 echo $?
 
@@ -70,12 +72,10 @@ echo $?
 echo $test
 echo $?
 <test1 | <test2
-echo $?
 
 echo --------exit status----------
 $var=test
 echo $?
-var=a
 export $var=test
 echo $var $a
 echo $?
@@ -84,18 +84,13 @@ echo --------parsing---------
 ""
 echo $?
 echo "\s"
-echo "\\s"
-echo $?
-echo "12\""
 echo $?
 echo "bip | bip ; coyotte > < "
 echo $?
-echo $USER$var\$USER$USER\$USERtest$USER	user42$USERuser42$USERtestuser42
+echo $USER$var$USER$USER$USERtest$USER user42$USERuser42$USERtestuser42
+echo $USER$var$USER$USER$USERtest$USER
 echo $?
-echo bonjour \
-ls	bonjour
-ls
-echo $?
+echo --------1---------
 $
 echo $?
 $LESS$VAR
@@ -143,9 +138,9 @@ ls
 cat test1
 
 echo --------substitution---------
-export var="  truc"
+export var="truc"
 echo $var
-export var="truc  "
+export var="truc"
 echo $var | cat -e
 echo "$tests""Makefile"
 echo "$tests"Makefile
@@ -154,21 +149,6 @@ $bla
 echo $var bonjour
 export $var
 export test=123
-echo $test
-export test="  foo    bar  "
-echo $test
-export test="  foo    bar  "
-echo ab$test
-export test="  foo    bar  "
-echo "ab"$test
-export test=" foo   bar "
-echo ab"$test" | cat -e
-export test=" foo   bar "
-echo "$test"
-export test=" foo   bar "
-echo ""$test""
-export test=" foo   bar "
-echo """$test"""
 export var= s\ -la
 l$var
 export var=at
@@ -201,3 +181,24 @@ echo $?
 unset PWD
 echo $?
 echo "END"
+
+
+exit
+
+Tests facultatifs :
+
+echo $test
+export test="  foo    bar  "
+echo $test
+export test="  foo    bar  "
+echo ab$test
+export test="  foo    bar  "
+echo "ab"$test
+export test=" foo   bar "
+echo ab"$test" | cat -e
+export test=" foo   bar "
+echo "$test"
+export test=" foo   bar "
+echo ""$test""
+export test=" foo   bar "
+echo """$test"""

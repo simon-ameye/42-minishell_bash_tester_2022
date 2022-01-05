@@ -1,7 +1,18 @@
 rm tmp1 tmp2 tmp3 tmp4 tmp5
-
+echo -------------------000-------------------
+""
+echo $?
 sleep 0.1
+echo -------------------00-------------------
+< tmp1 | > tmp1
+ls
+rm tmp1
+echo -------------------0-------------------
+< $SAMEYEE > tmp1
+ls
+rm tmp1
 echo -------------------1-------------------
+sleep 0.1
 echo $?
 echo hello > tmp1
 echo $?

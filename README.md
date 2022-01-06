@@ -1,11 +1,6 @@
 # 42-minishell_bash_tester_2022
 Simple tester for 42 minishell project
 
-[![latest version][npm-img]][npm-url] [![downloads][downloads-img]][npm-url]
-
-[npm-img]: https://img.shields.io/npm/v/beautiful-markdown.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/beautiful-markdown
-[downloads-img]: https://img.shields.io/npm/dm/beautiful-markdown.svg?style=flat-square
 ## Tested :
 - everything
 - even exit

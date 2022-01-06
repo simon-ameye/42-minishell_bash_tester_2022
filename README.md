@@ -15,6 +15,6 @@ Simple tester for 42 minishell project
 For leak test : set "VALGRIND_LEAKS_CKECK=1" (about 3mn on 42 PCs)
 
 ## Our version of minishell that passes all tests :
-https://github.com/simon-ameye/42-minishell
+[simon-ameye/42-minishell](https://github.com/simon-ameye/42-minishell)
 
 ![Alt text](preview.png?raw=true "Preview")

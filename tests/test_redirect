@@ -48,5 +48,18 @@ echo ----13----
 ls >tmp1 >> tmp1 >>tmp1 | cat
 echo $?
 echo $?
+echo ----14----
+rm tmp1 tmp2
+echo hello > tmp1
+echo hhell >> tmp1
+cat tmp1
+echo hell > tmp1
+cat tmp1
+echo hello >> tmp1 | echo bla
+cat tmp1
+echo hello >> tmp1 | echobla
+cat tmp1
+echobla | echo hello >> tmp1
+cat tmp1
 
 rm tmp1 tmp2

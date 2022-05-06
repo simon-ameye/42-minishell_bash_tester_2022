@@ -12,6 +12,7 @@ Simple tester for 42 minishell project
 1) Clone the repo
 2) Set your minishell path ```minishell_dir=``` in tester.sh
 4) Run ```bash tester.sh```
+5) Don't forget : prompt has to be printed on STDERR
 
 For leak test : set ```VALGRIND_LEAKS_CKECK=1``` (about 3mn on 42 PCs)
 
